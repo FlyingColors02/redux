@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{Component} from "react";
+import SongList from "./Components/songlist";
+import SelectedSong from "./Components/selectedsong";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+    constructor(props){
+        super(props);
+
+    }
+
+    render(){
+        return(
+            <React.Fragment>
+                <div className="row">
+                    <div className="col-md-5">
+                    <SongList/>
+                    </div>
+                    <div className="col-md-7">
+                    <SelectedSong/>
+                    </div>
+                </div>
+            
+            
+            </React.Fragment>
+            
+        )
+    }
 }
-
 export default App;
